@@ -6,7 +6,7 @@ class Custom_Package_Cart
         add_filter('woocommerce_add_to_cart_quantity', array($this, 'adjust_quantity'), 10, 2);
         add_action('woocommerce_add_cart_item_data', array($this, 'save_package_selection'), 10, 2);
         add_filter('woocommerce_get_item_data', array($this, 'display_package_in_cart'), 10, 2);
-        add_action('woocommerce_before_calculate_totals', array($this, 'modify_cart_item_price_based_on_quantity'), 10, 1); // Corrected this line
+        add_action('woocommerce_before_calculate_totals', array($this, 'modify_cart_item_price_based_on_quantity'), 10, 1);
     }
 
     /**
